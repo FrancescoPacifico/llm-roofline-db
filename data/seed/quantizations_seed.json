@@ -1,0 +1,74 @@
+[
+  {
+    "id": "FP16",
+    "label": "FP16 / BF16",
+    "bpw": 16.0,
+    "quality_tier": "Lossless Reference",
+    "ppl_delta": "+0.000",
+    "default_backend": "vllm / transformers",
+    "notes": "Full 16-bit floating point baseline; compute-heavy and highest VRAM footprint."
+  },
+  {
+    "id": "Q8_0",
+    "label": "Q8_0 (GGUF / 8-bit)",
+    "bpw": 8.5,
+    "quality_tier": "Near-Lossless",
+    "ppl_delta": "+0.002",
+    "default_backend": "llama.cpp / MLX",
+    "notes": "Virtually indistinguishable from FP16; halves weight memory and doubles decode speed."
+  },
+  {
+    "id": "Q6_K",
+    "label": "Q6_K (GGUF K-Quant)",
+    "bpw": 6.57,
+    "quality_tier": "High Precision",
+    "ppl_delta": "+0.008",
+    "default_backend": "llama.cpp",
+    "notes": "Sweet spot for 24B-32B coding and reasoning models when VRAM allows."
+  },
+  {
+    "id": "Q5_K_M",
+    "label": "Q5_K_M (GGUF K-Quant)",
+    "bpw": 5.69,
+    "quality_tier": "Balanced High",
+    "ppl_delta": "+0.025",
+    "default_backend": "llama.cpp",
+    "notes": "Strong balance between reasoning retention and bandwidth savings."
+  },
+  {
+    "id": "Q4_K_M",
+    "label": "Q4_K_M (GGUF Default)",
+    "bpw": 4.85,
+    "quality_tier": "Recommended 4-bit",
+    "ppl_delta": "+0.080",
+    "default_backend": "llama.cpp / Ollama",
+    "notes": "Industry standard 4-bit K-quant with mixed Q6_K/Q5_K attention & output tensors."
+  },
+  {
+    "id": "MLX_4BIT",
+    "label": "MLX 4-bit (Affine Group-64)",
+    "bpw": 4.5,
+    "quality_tier": "Apple Silicon Optimized",
+    "ppl_delta": "+0.095",
+    "default_backend": "mlx-lm",
+    "notes": "Native Apple Metal 4-bit affine quantization with minimal block metadata overhead."
+  },
+  {
+    "id": "IQ4_XS",
+    "label": "IQ4_XS (Importance-Weighted)",
+    "bpw": 4.25,
+    "quality_tier": "Compact 4-bit",
+    "ppl_delta": "+0.130",
+    "default_backend": "llama.cpp",
+    "notes": "Importance-matrix quantized 4-bit format that trims ~12% weight memory vs Q4_K_M."
+  },
+  {
+    "id": "Q3_K_M",
+    "label": "Q3_K_M (GGUF 3-bit)",
+    "bpw": 3.91,
+    "quality_tier": "Aggressive Compression",
+    "ppl_delta": "+0.350",
+    "default_backend": "llama.cpp",
+    "notes": "Useful for fitting 70B+ models into 48GB systems; noticeable degradation on small dense models."
+  }
+]

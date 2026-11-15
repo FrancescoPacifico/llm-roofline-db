@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+.DS_Store
+data/live/*.tmp
+dist/*.duckdb
+dist/*.duckdb.wal
