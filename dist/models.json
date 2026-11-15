@@ -26,7 +26,7 @@
     "api_prompt_usd_1m": 0.14,
     "api_completion_usd_1m": 0.8,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 315044
   },
@@ -57,7 +57,7 @@
     "api_prompt_usd_1m": 0.08,
     "api_completion_usd_1m": 0.28,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 3371612
   },
@@ -88,7 +88,7 @@
     "api_prompt_usd_1m": 0.12,
     "api_completion_usd_1m": 0.5,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 1135065
   },
@@ -119,7 +119,7 @@
     "api_prompt_usd_1m": 0.12,
     "api_completion_usd_1m": 0.24,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 13049351
   },
@@ -150,7 +150,7 @@
     "api_prompt_usd_1m": 0.04,
     "api_completion_usd_1m": 0.14,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 6050582
   },
@@ -181,7 +181,7 @@
     "api_prompt_usd_1m": 0.66,
     "api_completion_usd_1m": 1.0,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 537003
   },
@@ -212,7 +212,7 @@
     "api_prompt_usd_1m": 0.36,
     "api_completion_usd_1m": 0.4,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 149093
   },
@@ -243,7 +243,7 @@
     "api_prompt_usd_1m": 0.06,
     "api_completion_usd_1m": 0.2,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 603839
   },
@@ -274,7 +274,7 @@
     "api_prompt_usd_1m": 0.04,
     "api_completion_usd_1m": 0.12,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 6517377
   },
@@ -305,7 +305,7 @@
     "api_prompt_usd_1m": 0.5,
     "api_completion_usd_1m": 2.15,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 1649739
   },
@@ -336,7 +336,7 @@
     "api_prompt_usd_1m": 0.29,
     "api_completion_usd_1m": 1.14,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 1409220
   },
@@ -367,7 +367,7 @@
     "api_prompt_usd_1m": 0.2,
     "api_completion_usd_1m": 0.6,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 23953
   },
@@ -398,7 +398,7 @@
     "api_prompt_usd_1m": 0.1,
     "api_completion_usd_1m": 0.3,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 360664
   },
@@ -429,7 +429,7 @@
     "api_prompt_usd_1m": 0.06,
     "api_completion_usd_1m": 0.2,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 133517
   },
@@ -461,7 +461,7 @@
     "api_prompt_usd_1m": 0.35,
     "api_completion_usd_1m": 1.0,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 12667
   },
@@ -493,7 +493,7 @@
     "api_prompt_usd_1m": 0.1,
     "api_completion_usd_1m": 0.3,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 109443
   },
@@ -525,7 +525,7 @@
     "api_prompt_usd_1m": 0.71,
     "api_completion_usd_1m": 0.71,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 344904
   },
@@ -556,7 +556,7 @@
     "api_prompt_usd_1m": 0.8,
     "api_completion_usd_1m": 1.2,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 7747
   },
@@ -588,7 +588,7 @@
     "api_prompt_usd_1m": 0.72,
     "api_completion_usd_1m": 0.72,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 91879
   },
@@ -620,7 +620,7 @@
     "api_prompt_usd_1m": 0.02,
     "api_completion_usd_1m": 0.04,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 4238569
   },
@@ -652,7 +652,7 @@
     "api_prompt_usd_1m": 0.08,
     "api_completion_usd_1m": 0.35,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 326029
   },
@@ -684,7 +684,7 @@
     "api_prompt_usd_1m": 0.05,
     "api_completion_usd_1m": 0.15,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 403950
   },
@@ -716,7 +716,7 @@
     "api_prompt_usd_1m": 0.05,
     "api_completion_usd_1m": 0.1,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 1010980
   },
@@ -747,7 +747,7 @@
     "api_prompt_usd_1m": 0.351,
     "api_completion_usd_1m": 0.555,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 141785
   },
@@ -778,7 +778,7 @@
     "api_prompt_usd_1m": 0.1,
     "api_completion_usd_1m": 0.3,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 3888
   },
@@ -809,7 +809,7 @@
     "api_prompt_usd_1m": 2.0,
     "api_completion_usd_1m": 6.0,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 36961
   },
@@ -840,7 +840,7 @@
     "api_prompt_usd_1m": 0.24,
     "api_completion_usd_1m": 0.24,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 325372
   },
@@ -871,7 +871,7 @@
     "api_prompt_usd_1m": 0.07,
     "api_completion_usd_1m": 0.14,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 218593
   },
@@ -902,7 +902,7 @@
     "api_prompt_usd_1m": 0.1,
     "api_completion_usd_1m": 0.3,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 8369
   },
@@ -934,7 +934,7 @@
     "api_prompt_usd_1m": 2.5,
     "api_completion_usd_1m": 10.0,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "openrouter_live",
     "hf_downloads": 1956
   },
@@ -965,7 +965,7 @@
     "api_prompt_usd_1m": 0.1,
     "api_completion_usd_1m": 0.3,
     "search_tier": 1,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 30334
   },
@@ -996,7 +996,7 @@
     "api_prompt_usd_1m": 0.15,
     "api_completion_usd_1m": 0.4,
     "search_tier": 2,
-    "verified_at": "2026-11-15T12:27:14Z",
+    "verified_at": "2026-11-15T15:02:36Z",
     "api_price_source": "seed_reference",
     "hf_downloads": 35925
   }
