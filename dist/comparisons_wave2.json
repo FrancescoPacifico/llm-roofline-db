@@ -189,6 +189,188 @@
     "priority": 1
   },
   {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-mac-studio-m5-max-128gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "mac-studio-m5-max-128gb",
+    "title": "NVIDIA DGX Spark GB10 128GB vs Mac Studio M5 Max 128GB",
+    "priority": 1
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-mac-studio-m4-max-128gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "mac-studio-m4-max-128gb",
+    "title": "NVIDIA DGX Spark GB10 128GB vs Mac Studio M4 Max 128GB",
+    "priority": 1
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-ryzen-ai-max-395-128gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "ryzen-ai-max-395-128gb",
+    "title": "NVIDIA DGX Spark GB10 128GB vs Ryzen AI Max+ 395 128GB",
+    "priority": 1
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-rtx-pro-6000-96gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "rtx-pro-6000-96gb",
+    "title": "NVIDIA DGX Spark GB10 128GB vs RTX PRO 6000 96GB",
+    "priority": 1
+  },
+  {
+    "slug": "mac-studio-m5-max-128gb-vs-mac-studio-m4-max-128gb",
+    "hw_a": "mac-studio-m5-max-128gb",
+    "hw_b": "mac-studio-m4-max-128gb",
+    "title": "Mac Studio M5 Max 128GB vs M4 Max 128GB",
+    "priority": 1
+  },
+  {
+    "slug": "mac-studio-m5-ultra-256gb-vs-mac-studio-m3-ultra-256gb",
+    "hw_a": "mac-studio-m5-ultra-256gb",
+    "hw_b": "mac-studio-m3-ultra-256gb",
+    "title": "Mac Studio M5 Ultra 256GB vs M3 Ultra 256GB",
+    "priority": 1
+  },
+  {
+    "slug": "mac-studio-m5-ultra-512gb-vs-mac-studio-m3-ultra-512gb",
+    "hw_a": "mac-studio-m5-ultra-512gb",
+    "hw_b": "mac-studio-m3-ultra-512gb",
+    "title": "Mac Studio M5 Ultra 512GB vs M3 Ultra 512GB",
+    "priority": 1
+  },
+  {
+    "slug": "mac-studio-m5-ultra-512gb-vs-cloud-b200-sxm-180gb",
+    "hw_a": "mac-studio-m5-ultra-512gb",
+    "hw_b": "cloud-b200-sxm-180gb",
+    "title": "Mac Studio M5 Ultra 512GB vs Cloud B200 SXM 180GB",
+    "priority": 1
+  },
+  {
+    "slug": "macbook-pro-m5-max-128gb-vs-macbook-pro-m4-max-128gb",
+    "hw_a": "macbook-pro-m5-max-128gb",
+    "hw_b": "macbook-pro-m4-max-128gb",
+    "title": "MacBook Pro M5 Max 128GB vs M4 Max 128GB",
+    "priority": 1
+  },
+  {
+    "slug": "macbook-pro-m5-max-128gb-vs-macbook-pro-m3-max-128gb",
+    "hw_a": "macbook-pro-m5-max-128gb",
+    "hw_b": "macbook-pro-m3-max-128gb",
+    "title": "MacBook Pro M5 Max 128GB vs M3 Max 128GB",
+    "priority": 1
+  },
+  {
+    "slug": "rx-9070-xt-16gb-vs-rtx-5070-ti-16gb",
+    "hw_a": "rx-9070-xt-16gb",
+    "hw_b": "rtx-5070-ti-16gb",
+    "title": "Radeon RX 9070 XT 16GB vs RTX 5070 Ti 16GB",
+    "priority": 1
+  },
+  {
+    "slug": "cloud-b200-sxm-180gb-vs-cloud-h200-sxm-141gb",
+    "hw_a": "cloud-b200-sxm-180gb",
+    "hw_b": "cloud-h200-sxm-141gb",
+    "title": "Cloud NVIDIA B200 SXM 180GB vs H200 SXM 141GB",
+    "priority": 1
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-mac-mini-m4-pro-48gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "mac-mini-m4-pro-48gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Apple Mac Mini M4 Pro (48 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-mac-mini-m4-pro-64gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "mac-mini-m4-pro-64gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Apple Mac Mini M4 Pro (64 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-macbook-pro-m3-max-64gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "macbook-pro-m3-max-64gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Apple MacBook Pro M3 Max (64 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-macbook-pro-m5-max-128gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "macbook-pro-m5-max-128gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Apple MacBook Pro M5 Max (128 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-mac-studio-m4-max-64gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "mac-studio-m4-max-64gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Apple Mac Studio M4 Max (64 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-mac-studio-m3-ultra-256gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "mac-studio-m3-ultra-256gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Apple Mac Studio M3 Ultra (256 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-mac-studio-m5-ultra-256gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "mac-studio-m5-ultra-256gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Apple Mac Studio M5 Ultra (256 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-ryzen-ai-max-395-64gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "ryzen-ai-max-395-64gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Ryzen AI Max+ 395 Strix Halo (64 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-ryzen-ai-hx-370-64gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "ryzen-ai-hx-370-64gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Ryzen AI 9 HX 370 Mini-PC (64 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-dual-rtx-3090-48gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "dual-rtx-3090-48gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs 2x NVIDIA RTX 3090 Rig (48 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-cloud-l40s-48gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "cloud-l40s-48gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Cloud NVIDIA L40S (48 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-cloud-a100-sxm-80gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "cloud-a100-sxm-80gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Cloud NVIDIA A100 SXM (80 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-cloud-h100-sxm-80gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "cloud-h100-sxm-80gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Cloud NVIDIA H100 SXM (80 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "nvidia-dgx-spark-gb10-128gb-vs-cloud-b200-sxm-180gb",
+    "hw_a": "nvidia-dgx-spark-gb10-128gb",
+    "hw_b": "cloud-b200-sxm-180gb",
+    "title": "NVIDIA DGX Spark GB10 (128 GB) vs Cloud NVIDIA B200 SXM (180 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
     "slug": "mac-mini-m4-24gb-vs-mac-mini-m4-pro-48gb",
     "hw_a": "mac-mini-m4-24gb",
     "hw_b": "mac-mini-m4-pro-48gb",
@@ -249,6 +431,13 @@
     "hw_a": "mac-mini-m4-24gb",
     "hw_b": "rx-7900-xtx-24gb",
     "title": "Apple Mac Mini M4 (24 GB) vs AMD Radeon RX 7900 XTX (24 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "mac-mini-m4-24gb-vs-rx-9070-xt-16gb",
+    "hw_a": "mac-mini-m4-24gb",
+    "hw_b": "rx-9070-xt-16gb",
+    "title": "Apple Mac Mini M4 (24 GB) vs AMD Radeon RX 9070 XT (16 GB) for Local LLM Inference",
     "priority": 2
   },
   {
@@ -343,6 +532,13 @@
     "priority": 2
   },
   {
+    "slug": "mac-mini-m4-pro-48gb-vs-rx-9070-xt-16gb",
+    "hw_a": "mac-mini-m4-pro-48gb",
+    "hw_b": "rx-9070-xt-16gb",
+    "title": "Apple Mac Mini M4 Pro (48 GB) vs AMD Radeon RX 9070 XT (16 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
     "slug": "mac-mini-m4-pro-48gb-vs-cloud-l40s-48gb",
     "hw_a": "mac-mini-m4-pro-48gb",
     "hw_b": "cloud-l40s-48gb",
@@ -371,6 +567,13 @@
     "priority": 2
   },
   {
+    "slug": "mac-mini-m4-pro-64gb-vs-macbook-pro-m5-max-128gb",
+    "hw_a": "mac-mini-m4-pro-64gb",
+    "hw_b": "macbook-pro-m5-max-128gb",
+    "title": "Apple Mac Mini M4 Pro (64 GB) vs Apple MacBook Pro M5 Max (128 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
     "slug": "mac-mini-m4-pro-64gb-vs-mac-studio-m4-max-64gb",
     "hw_a": "mac-mini-m4-pro-64gb",
     "hw_b": "mac-studio-m4-max-64gb",
@@ -382,6 +585,13 @@
     "hw_a": "mac-mini-m4-pro-64gb",
     "hw_b": "mac-studio-m4-max-128gb",
     "title": "Apple Mac Mini M4 Pro (64 GB) vs Apple Mac Studio M4 Max (128 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "mac-mini-m4-pro-64gb-vs-mac-studio-m5-max-128gb",
+    "hw_a": "mac-mini-m4-pro-64gb",
+    "hw_b": "mac-studio-m5-max-128gb",
+    "title": "Apple Mac Mini M4 Pro (64 GB) vs Apple Mac Studio M5 Max (128 GB) for Local LLM Inference",
     "priority": 2
   },
   {
@@ -455,6 +665,13 @@
     "priority": 2
   },
   {
+    "slug": "mac-mini-m4-pro-64gb-vs-rx-9070-xt-16gb",
+    "hw_a": "mac-mini-m4-pro-64gb",
+    "hw_b": "rx-9070-xt-16gb",
+    "title": "Apple Mac Mini M4 Pro (64 GB) vs AMD Radeon RX 9070 XT (16 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
     "slug": "mac-mini-m4-pro-64gb-vs-cloud-l40s-48gb",
     "hw_a": "mac-mini-m4-pro-64gb",
     "hw_b": "cloud-l40s-48gb",
@@ -476,10 +693,24 @@
     "priority": 2
   },
   {
+    "slug": "macbook-pro-m3-max-64gb-vs-macbook-pro-m5-max-128gb",
+    "hw_a": "macbook-pro-m3-max-64gb",
+    "hw_b": "macbook-pro-m5-max-128gb",
+    "title": "Apple MacBook Pro M3 Max (64 GB) vs Apple MacBook Pro M5 Max (128 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
     "slug": "macbook-pro-m3-max-64gb-vs-mac-studio-m4-max-128gb",
     "hw_a": "macbook-pro-m3-max-64gb",
     "hw_b": "mac-studio-m4-max-128gb",
     "title": "Apple MacBook Pro M3 Max (64 GB) vs Apple Mac Studio M4 Max (128 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "macbook-pro-m3-max-64gb-vs-mac-studio-m5-max-128gb",
+    "hw_a": "macbook-pro-m3-max-64gb",
+    "hw_b": "mac-studio-m5-max-128gb",
+    "title": "Apple MacBook Pro M3 Max (64 GB) vs Apple Mac Studio M5 Max (128 GB) for Local LLM Inference",
     "priority": 2
   },
   {
@@ -560,6 +791,13 @@
     "priority": 2
   },
   {
+    "slug": "macbook-pro-m3-max-64gb-vs-rx-9070-xt-16gb",
+    "hw_a": "macbook-pro-m3-max-64gb",
+    "hw_b": "rx-9070-xt-16gb",
+    "title": "Apple MacBook Pro M3 Max (64 GB) vs AMD Radeon RX 9070 XT (16 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
     "slug": "macbook-pro-m3-max-64gb-vs-cloud-l40s-48gb",
     "hw_a": "macbook-pro-m3-max-64gb",
     "hw_b": "cloud-l40s-48gb",
@@ -581,262 +819,24 @@
     "priority": 2
   },
   {
-    "slug": "mac-studio-m4-max-64gb-vs-mac-studio-m4-max-128gb",
-    "hw_a": "mac-studio-m4-max-64gb",
+    "slug": "macbook-pro-m5-max-128gb-vs-mac-studio-m4-max-64gb",
+    "hw_a": "macbook-pro-m5-max-128gb",
+    "hw_b": "mac-studio-m4-max-64gb",
+    "title": "Apple MacBook Pro M5 Max (128 GB) vs Apple Mac Studio M4 Max (64 GB) for Local LLM Inference",
+    "priority": 2
+  },
+  {
+    "slug": "macbook-pro-m5-max-128gb-vs-mac-studio-m4-max-128gb",
+    "hw_a": "macbook-pro-m5-max-128gb",
     "hw_b": "mac-studio-m4-max-128gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs Apple Mac Studio M4 Max (128 GB) for Local LLM Inference",
+    "title": "Apple MacBook Pro M5 Max (128 GB) vs Apple Mac Studio M4 Max (128 GB) for Local LLM Inference",
     "priority": 2
   },
   {
-    "slug": "mac-studio-m4-max-64gb-vs-ryzen-ai-max-395-128gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "ryzen-ai-max-395-128gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs Ryzen AI Max+ 395 Strix Halo (128 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-ryzen-ai-max-395-64gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "ryzen-ai-max-395-64gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs Ryzen AI Max+ 395 Strix Halo (64 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-ryzen-ai-hx-370-64gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "ryzen-ai-hx-370-64gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs Ryzen AI 9 HX 370 Mini-PC (64 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-rtx-5080-16gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "rtx-5080-16gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs NVIDIA RTX 5080 (16 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-rtx-5070-ti-16gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "rtx-5070-ti-16gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs NVIDIA RTX 5070 Ti (16 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-rtx-5060-ti-16gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "rtx-5060-ti-16gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs NVIDIA RTX 5060 Ti (16 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-rtx-4090-24gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "rtx-4090-24gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs NVIDIA RTX 4090 (24 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-rtx-3090-24gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "rtx-3090-24gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs NVIDIA RTX 3090 (24 GB Used) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-dual-rtx-3090-48gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "dual-rtx-3090-48gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs 2x NVIDIA RTX 3090 Rig (48 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-rx-7900-xtx-24gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "rx-7900-xtx-24gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs AMD Radeon RX 7900 XTX (24 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-cloud-l40s-48gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "cloud-l40s-48gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs Cloud NVIDIA L40S (48 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-cloud-a100-sxm-80gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "cloud-a100-sxm-80gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs Cloud NVIDIA A100 SXM (80 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-64gb-vs-cloud-h100-sxm-80gb",
-    "hw_a": "mac-studio-m4-max-64gb",
-    "hw_b": "cloud-h100-sxm-80gb",
-    "title": "Apple Mac Studio M4 Max (64 GB) vs Cloud NVIDIA H100 SXM (80 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-128gb-vs-mac-studio-m3-ultra-256gb",
-    "hw_a": "mac-studio-m4-max-128gb",
-    "hw_b": "mac-studio-m3-ultra-256gb",
-    "title": "Apple Mac Studio M4 Max (128 GB) vs Apple Mac Studio M3 Ultra (256 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-128gb-vs-ryzen-ai-max-395-64gb",
-    "hw_a": "mac-studio-m4-max-128gb",
-    "hw_b": "ryzen-ai-max-395-64gb",
-    "title": "Apple Mac Studio M4 Max (128 GB) vs Ryzen AI Max+ 395 Strix Halo (64 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-128gb-vs-ryzen-ai-hx-370-64gb",
-    "hw_a": "mac-studio-m4-max-128gb",
-    "hw_b": "ryzen-ai-hx-370-64gb",
-    "title": "Apple Mac Studio M4 Max (128 GB) vs Ryzen AI 9 HX 370 Mini-PC (64 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-128gb-vs-rtx-5090-32gb",
-    "hw_a": "mac-studio-m4-max-128gb",
-    "hw_b": "rtx-5090-32gb",
-    "title": "Apple Mac Studio M4 Max (128 GB) vs NVIDIA RTX 5090 (32 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-128gb-vs-cloud-l40s-48gb",
-    "hw_a": "mac-studio-m4-max-128gb",
-    "hw_b": "cloud-l40s-48gb",
-    "title": "Apple Mac Studio M4 Max (128 GB) vs Cloud NVIDIA L40S (48 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-128gb-vs-cloud-a100-sxm-80gb",
-    "hw_a": "mac-studio-m4-max-128gb",
-    "hw_b": "cloud-a100-sxm-80gb",
-    "title": "Apple Mac Studio M4 Max (128 GB) vs Cloud NVIDIA A100 SXM (80 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m4-max-128gb-vs-cloud-h100-sxm-80gb",
-    "hw_a": "mac-studio-m4-max-128gb",
-    "hw_b": "cloud-h100-sxm-80gb",
-    "title": "Apple Mac Studio M4 Max (128 GB) vs Cloud NVIDIA H100 SXM (80 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m3-ultra-256gb-vs-ryzen-ai-max-395-128gb",
-    "hw_a": "mac-studio-m3-ultra-256gb",
-    "hw_b": "ryzen-ai-max-395-128gb",
-    "title": "Apple Mac Studio M3 Ultra (256 GB) vs Ryzen AI Max+ 395 Strix Halo (128 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m3-ultra-256gb-vs-cloud-a100-sxm-80gb",
-    "hw_a": "mac-studio-m3-ultra-256gb",
-    "hw_b": "cloud-a100-sxm-80gb",
-    "title": "Apple Mac Studio M3 Ultra (256 GB) vs Cloud NVIDIA A100 SXM (80 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "mac-studio-m3-ultra-256gb-vs-cloud-h100-sxm-80gb",
-    "hw_a": "mac-studio-m3-ultra-256gb",
-    "hw_b": "cloud-h100-sxm-80gb",
-    "title": "Apple Mac Studio M3 Ultra (256 GB) vs Cloud NVIDIA H100 SXM (80 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-128gb-vs-ryzen-ai-max-395-64gb",
-    "hw_a": "ryzen-ai-max-395-128gb",
-    "hw_b": "ryzen-ai-max-395-64gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (128 GB) vs Ryzen AI Max+ 395 Strix Halo (64 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-128gb-vs-ryzen-ai-hx-370-64gb",
-    "hw_a": "ryzen-ai-max-395-128gb",
-    "hw_b": "ryzen-ai-hx-370-64gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (128 GB) vs Ryzen AI 9 HX 370 Mini-PC (64 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-128gb-vs-cloud-l40s-48gb",
-    "hw_a": "ryzen-ai-max-395-128gb",
-    "hw_b": "cloud-l40s-48gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (128 GB) vs Cloud NVIDIA L40S (48 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-128gb-vs-cloud-a100-sxm-80gb",
-    "hw_a": "ryzen-ai-max-395-128gb",
-    "hw_b": "cloud-a100-sxm-80gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (128 GB) vs Cloud NVIDIA A100 SXM (80 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-128gb-vs-cloud-h100-sxm-80gb",
-    "hw_a": "ryzen-ai-max-395-128gb",
-    "hw_b": "cloud-h100-sxm-80gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (128 GB) vs Cloud NVIDIA H100 SXM (80 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-64gb-vs-ryzen-ai-hx-370-64gb",
-    "hw_a": "ryzen-ai-max-395-64gb",
-    "hw_b": "ryzen-ai-hx-370-64gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (64 GB) vs Ryzen AI 9 HX 370 Mini-PC (64 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-64gb-vs-rtx-5090-32gb",
-    "hw_a": "ryzen-ai-max-395-64gb",
-    "hw_b": "rtx-5090-32gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (64 GB) vs NVIDIA RTX 5090 (32 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-64gb-vs-rtx-5080-16gb",
-    "hw_a": "ryzen-ai-max-395-64gb",
-    "hw_b": "rtx-5080-16gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (64 GB) vs NVIDIA RTX 5080 (16 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-64gb-vs-rtx-5070-ti-16gb",
-    "hw_a": "ryzen-ai-max-395-64gb",
-    "hw_b": "rtx-5070-ti-16gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (64 GB) vs NVIDIA RTX 5070 Ti (16 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-64gb-vs-rtx-5060-ti-16gb",
-    "hw_a": "ryzen-ai-max-395-64gb",
-    "hw_b": "rtx-5060-ti-16gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (64 GB) vs NVIDIA RTX 5060 Ti (16 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-64gb-vs-rtx-4090-24gb",
-    "hw_a": "ryzen-ai-max-395-64gb",
-    "hw_b": "rtx-4090-24gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (64 GB) vs NVIDIA RTX 4090 (24 GB) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-64gb-vs-rtx-3090-24gb",
-    "hw_a": "ryzen-ai-max-395-64gb",
-    "hw_b": "rtx-3090-24gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (64 GB) vs NVIDIA RTX 3090 (24 GB Used) for Local LLM Inference",
-    "priority": 2
-  },
-  {
-    "slug": "ryzen-ai-max-395-64gb-vs-dual-rtx-3090-48gb",
-    "hw_a": "ryzen-ai-max-395-64gb",
-    "hw_b": "dual-rtx-3090-48gb",
-    "title": "Ryzen AI Max+ 395 Strix Halo (64 GB) vs 2x NVIDIA RTX 3090 Rig (48 GB) for Local LLM Inference",
+    "slug": "macbook-pro-m5-max-128gb-vs-mac-studio-m5-max-128gb",
+    "hw_a": "macbook-pro-m5-max-128gb",
+    "hw_b": "mac-studio-m5-max-128gb",
+    "title": "Apple MacBook Pro M5 Max (128 GB) vs Apple Mac Studio M5 Max (128 GB) for Local LLM Inference",
     "priority": 2
   }
 ]

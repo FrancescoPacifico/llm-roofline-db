@@ -35,6 +35,12 @@ def compute_memory_limits(hw: dict[str, Any]) -> tuple[float, float]:
     vram_gib = float(hw["vram_gib"])
     num_gpus = int(hw.get("num_gpus", 1))
 
+    if hw.get("usable_mem_override_gib") is not None:
+        usable = round(float(hw["usable_mem_override_gib"]), 2)
+        tuned_raw = hw.get("tuned_usable_mem_override_gib")
+        tuned = round(float(tuned_raw), 2) if tuned_raw is not None else usable
+        return max(1.0, usable), max(1.0, tuned)
+
     if category in ("discrete_gpu", "cloud_gpu"):
         driver_overhead = 0.6 if category == "cloud_gpu" else 1.0
         usable = round(vram_gib * num_gpus - driver_overhead - max(0, num_gpus - 1) * 0.35, 2)
@@ -61,6 +67,23 @@ def compute_kv_bytes(model: dict[str, Any], ctx_tokens: int, kv_quant: str, batc
     num_layers = int(model["num_layers"])
     sliding_window = int(model.get("sliding_window", 0))
     global_layer_ratio = float(model.get("global_layer_ratio", 1.0))
+    attention_type = model.get("attention_type")
+
+    if attention_type == "hybrid_linear":
+        global_layers = round(num_layers * global_layer_ratio)
+        linear_layers = num_layers - global_layers
+        full_kv = (
+            2
+            * global_layers
+            * ctx_tokens
+            * int(model["num_kv_heads"])
+            * int(model["head_dim"])
+            * kv_bytes
+            * batch_size
+        )
+        linear_elems = int(model.get("linear_state_elems_per_layer", 0) or 0)
+        linear_state = linear_layers * linear_elems * 4.0 * batch_size
+        return float(full_kv + linear_state)
 
     if sliding_window > 0 and global_layer_ratio < 1.0:
         global_layers = round(num_layers * global_layer_ratio)
@@ -69,9 +92,26 @@ def compute_kv_bytes(model: dict[str, Any], ctx_tokens: int, kv_quant: str, batc
     else:
         layer_tokens = num_layers * ctx_tokens
 
-    if model.get("attention_type") == "mla":
+    if attention_type == "mla":
         per_token_dim = int(model["kv_lora_rank"]) + int(model["qk_rope_head_dim"])
         return float(layer_tokens * per_token_dim * kv_bytes * batch_size)
+
+    if sliding_window > 0 and global_layer_ratio < 1.0:
+        global_layers = round(num_layers * global_layer_ratio)
+        local_layers = num_layers - global_layers
+        global_kv_heads = int(model.get("global_num_kv_heads") or model["num_kv_heads"])
+        global_head_dim = int(model.get("global_head_dim") or model["head_dim"])
+        global_bytes = 2 * global_layers * ctx_tokens * global_kv_heads * global_head_dim * kv_bytes * batch_size
+        local_bytes = (
+            2
+            * local_layers
+            * min(ctx_tokens, sliding_window)
+            * int(model["num_kv_heads"])
+            * int(model["head_dim"])
+            * kv_bytes
+            * batch_size
+        )
+        return float(global_bytes + local_bytes)
 
     return float(2 * layer_tokens * int(model["num_kv_heads"]) * int(model["head_dim"]) * kv_bytes * batch_size)
 
@@ -144,9 +184,14 @@ def evaluate_pair(
     bottleneck = "memory_bandwidth" if bw_bound_tok_s <= compute_bound_tok_s else "compute_tflops"
 
     linear_flops_per_tok = 2.0 * params_active_b * 1e9
+    attn_layers = (
+        round(int(model["num_layers"]) * float(model.get("global_layer_ratio", 1.0)))
+        if model.get("attention_type") == "hybrid_linear"
+        else int(model["num_layers"])
+    )
     attn_flops_per_tok = (
         2.0
-        * int(model["num_layers"])
+        * attn_layers
         * int(model["num_q_heads"])
         * int(model["head_dim"])
         * eff_prompt

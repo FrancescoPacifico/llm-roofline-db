@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
+import re
 import sys
 from typing import Any
 
@@ -40,9 +42,15 @@ def compute_worthiness_score(
         "mac-mini-m4-pro-48gb",
         "mac-mini-m4-pro-64gb",
         "macbook-pro-m3-max-64gb",
+        "macbook-pro-m4-max-128gb",
+        "macbook-pro-m5-max-128gb",
         "mac-studio-m4-max-128gb",
+        "mac-studio-m5-max-128gb",
         "mac-studio-m3-ultra-256gb",
         "mac-studio-m3-ultra-512gb",
+        "mac-studio-m5-ultra-256gb",
+        "mac-studio-m5-ultra-512gb",
+        "nvidia-dgx-spark-gb10-128gb",
         "ryzen-ai-max-395-128gb",
         "ryzen-ai-max-395-64gb",
         "rtx-5090-32gb",
@@ -52,8 +60,11 @@ def compute_worthiness_score(
         "rtx-3090-24gb",
         "dual-rtx-3090-48gb",
         "rtx-3060-12gb",
+        "rx-9070-xt-16gb",
+        "rtx-pro-6000-96gb",
         "cloud-h100-sxm-80gb",
         "cloud-h200-sxm-141gb",
+        "cloud-b200-sxm-180gb",
         "cloud-l40s-48gb",
     }:
         score += 14
@@ -128,6 +139,18 @@ def build_wave2_comparisons(hardware: list[dict[str, Any]]) -> list[dict[str, An
         ("mac-mini-m4-pro-48gb", "ryzen-ai-max-395-64gb", "Mac Mini M4 Pro 48GB vs Strix Halo 64GB"),
         ("macbook-pro-m3-max-128gb", "mac-studio-m4-max-128gb", "MacBook Pro M3 Max 128GB vs Mac Studio M4 Max 128GB"),
         ("mac-mini-m4-16gb", "rtx-3060-12gb", "Mac Mini M4 16GB vs RTX 3060 12GB Entry Local AI"),
+        ("nvidia-dgx-spark-gb10-128gb", "mac-studio-m5-max-128gb", "NVIDIA DGX Spark GB10 128GB vs Mac Studio M5 Max 128GB"),
+        ("nvidia-dgx-spark-gb10-128gb", "mac-studio-m4-max-128gb", "NVIDIA DGX Spark GB10 128GB vs Mac Studio M4 Max 128GB"),
+        ("nvidia-dgx-spark-gb10-128gb", "ryzen-ai-max-395-128gb", "NVIDIA DGX Spark GB10 128GB vs Ryzen AI Max+ 395 128GB"),
+        ("nvidia-dgx-spark-gb10-128gb", "rtx-pro-6000-96gb", "NVIDIA DGX Spark GB10 128GB vs RTX PRO 6000 96GB"),
+        ("mac-studio-m5-max-128gb", "mac-studio-m4-max-128gb", "Mac Studio M5 Max 128GB vs M4 Max 128GB"),
+        ("mac-studio-m5-ultra-256gb", "mac-studio-m3-ultra-256gb", "Mac Studio M5 Ultra 256GB vs M3 Ultra 256GB"),
+        ("mac-studio-m5-ultra-512gb", "mac-studio-m3-ultra-512gb", "Mac Studio M5 Ultra 512GB vs M3 Ultra 512GB"),
+        ("mac-studio-m5-ultra-512gb", "cloud-b200-sxm-180gb", "Mac Studio M5 Ultra 512GB vs Cloud B200 SXM 180GB"),
+        ("macbook-pro-m5-max-128gb", "macbook-pro-m4-max-128gb", "MacBook Pro M5 Max 128GB vs M4 Max 128GB"),
+        ("macbook-pro-m5-max-128gb", "macbook-pro-m3-max-128gb", "MacBook Pro M5 Max 128GB vs M3 Max 128GB"),
+        ("rx-9070-xt-16gb", "rtx-5070-ti-16gb", "Radeon RX 9070 XT 16GB vs RTX 5070 Ti 16GB"),
+        ("cloud-b200-sxm-180gb", "cloud-h200-sxm-141gb", "Cloud NVIDIA B200 SXM 180GB vs H200 SXM 141GB"),
     ]
 
     comparisons: list[dict[str, Any]] = []
@@ -140,13 +163,17 @@ def build_wave2_comparisons(hardware: list[dict[str, Any]]) -> list[dict[str, An
             comparisons.append({"slug": slug, "hw_a": a, "hw_b": b, "title": title, "priority": 1})
 
     key_local = [
+        "nvidia-dgx-spark-gb10-128gb",
         "mac-mini-m4-24gb",
         "mac-mini-m4-pro-48gb",
         "mac-mini-m4-pro-64gb",
         "macbook-pro-m3-max-64gb",
+        "macbook-pro-m5-max-128gb",
         "mac-studio-m4-max-64gb",
         "mac-studio-m4-max-128gb",
+        "mac-studio-m5-max-128gb",
         "mac-studio-m3-ultra-256gb",
+        "mac-studio-m5-ultra-256gb",
         "ryzen-ai-max-395-128gb",
         "ryzen-ai-max-395-64gb",
         "ryzen-ai-hx-370-64gb",
@@ -158,9 +185,11 @@ def build_wave2_comparisons(hardware: list[dict[str, Any]]) -> list[dict[str, An
         "rtx-3090-24gb",
         "dual-rtx-3090-48gb",
         "rx-7900-xtx-24gb",
+        "rx-9070-xt-16gb",
         "cloud-l40s-48gb",
         "cloud-a100-sxm-80gb",
         "cloud-h100-sxm-80gb",
+        "cloud-b200-sxm-180gb",
     ]
     for i, a in enumerate(key_local):
         for b in key_local[i + 1 :]:
@@ -190,6 +219,101 @@ def build_wave2_comparisons(hardware: list[dict[str, Any]]) -> list[dict[str, An
             break
 
     return comparisons
+
+
+def read_active_seo_wave(web_root: Path | None = None) -> int:
+    """Read active SEO_WAVE from web/src/config/seo.ts and optional env override."""
+    target_web = web_root if web_root is not None else ROOT.parent / "web"
+    seo_path = target_web / "src" / "config" / "seo.ts"
+    config_wave = 0
+    if seo_path.exists():
+        match = re.search(r'SEO_WAVE\s*\?\?\s*"(\d+)"', seo_path.read_text(encoding="utf-8"))
+        if match:
+            config_wave = int(match.group(1))
+    env_raw = os.environ.get("SEO_WAVE")
+    if env_raw is not None:
+        try:
+            return max(config_wave, int(env_raw))
+        except ValueError:
+            return config_wave
+    return config_wave
+
+
+def preserve_published_spokes(
+    candidates: list[dict[str, Any]],
+    all_rows_by_slug: dict[str, dict[str, Any]],
+    existing_manifest_path: Path,
+    active_wave: int,
+    cap: int = 320,
+) -> list[dict[str, Any]]:
+    """Preserve already-published Wave 1 spoke slugs when SEO_WAVE >= 1 to prevent 404s."""
+    if active_wave < 1 or not existing_manifest_path.exists():
+        return candidates[:cap]
+
+    existing_items: list[dict[str, Any]] = json.loads(existing_manifest_path.read_text(encoding="utf-8"))
+    preserved: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for item in existing_items:
+        slug = item.get("slug")
+        if isinstance(slug, str) and slug in all_rows_by_slug and slug not in seen:
+            preserved.append(all_rows_by_slug[slug])
+            seen.add(slug)
+
+    for row in candidates:
+        if len(preserved) >= cap:
+            break
+        slug = row["slug"]
+        if slug not in seen:
+            preserved.append(row)
+            seen.add(slug)
+
+    preserved.sort(key=lambda r: (-r["worthiness_score"], -r["decode_32k_tok_s"], r["slug"]))
+    return preserved
+
+
+def preserve_published_comparisons(
+    fresh_comparisons: list[dict[str, Any]],
+    hardware_by_slug: dict[str, dict[str, Any]],
+    existing_manifest_path: Path,
+    active_wave: int,
+    cap: int = 120,
+) -> list[dict[str, Any]]:
+    """Preserve already-published Wave 2 comparison slugs when SEO_WAVE >= 2 to prevent 404s."""
+    if active_wave < 2 or not existing_manifest_path.exists():
+        return fresh_comparisons[:cap]
+
+    existing_items: list[dict[str, Any]] = json.loads(existing_manifest_path.read_text(encoding="utf-8"))
+    fresh_by_slug = {c["slug"]: c for c in fresh_comparisons}
+    preserved: list[dict[str, Any]] = []
+    seen_slugs: set[str] = set()
+
+    for item in existing_items:
+        slug = item.get("slug")
+        hw_a = item.get("hw_a")
+        hw_b = item.get("hw_b")
+        if (
+            isinstance(slug, str)
+            and isinstance(hw_a, str)
+            and isinstance(hw_b, str)
+            and hw_a in hardware_by_slug
+            and hw_b in hardware_by_slug
+            and slug not in seen_slugs
+        ):
+            preserved.append(fresh_by_slug.get(slug, item))
+            seen_slugs.add(slug)
+            seen_slugs.add(f"{hw_b}-vs-{hw_a}")
+
+    for comp in fresh_comparisons:
+        if len(preserved) >= cap:
+            break
+        slug = comp["slug"]
+        rev_slug = f"{comp['hw_b']}-vs-{comp['hw_a']}"
+        if slug not in seen_slugs and rev_slug not in seen_slugs:
+            preserved.append(comp)
+            seen_slugs.add(slug)
+            seen_slugs.add(rev_slug)
+
+    return preserved
 
 
 def main() -> int:
@@ -250,8 +374,23 @@ def main() -> int:
                 spokes_candidates.append(row)
 
     spokes_candidates.sort(key=lambda r: (-r["worthiness_score"], -r["decode_32k_tok_s"], r["slug"]))
-    spokes_wave1 = spokes_candidates[:320]
-    comparisons_wave2 = build_wave2_comparisons(hardware)
+    active_wave = read_active_seo_wave()
+    web_generated = ROOT.parent / "web" / "src" / "data" / "generated"
+    all_rows_by_slug = {row["slug"]: row for row in matrix_rows}
+    hw_by_slug = {hw["slug"]: hw for hw in hardware}
+
+    spokes_wave1 = preserve_published_spokes(
+        spokes_candidates,
+        all_rows_by_slug,
+        web_generated / "spokes_wave1.json",
+        active_wave=active_wave,
+    )
+    comparisons_wave2 = preserve_published_comparisons(
+        build_wave2_comparisons(hardware),
+        hw_by_slug,
+        web_generated / "comparisons_wave2.json",
+        active_wave=active_wave,
+    )
 
     # Write JSON exports
     (dist_dir / "models.json").write_text(json.dumps(models, indent=2) + "\n")
@@ -285,7 +424,7 @@ def main() -> int:
         con.close()
 
     print(
-        f"Built DuckDB & exports: {len(models)} models × {len(hardware)} hardware = {len(matrix_rows)} pairs | "
+        f"Built DuckDB & exports (SEO_WAVE={active_wave}): {len(models)} models × {len(hardware)} hardware = {len(matrix_rows)} pairs | "
         f"Wave 1 spokes={len(spokes_wave1)} (from {len(spokes_candidates)} >=70) | Wave 2 comparisons={len(comparisons_wave2)}"
     )
     return 0
